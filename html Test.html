@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="test page">
+        <meta content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                color: red;
+            }
+        </style>
+        <script>
+            function myFunction() {
+               var x = document.getElementById("fInput");
+                x.value = x.value.toUpperCase();
+            }
+        </script>
+    </head>
+    <body>
+        <p>This Is A Test Of HTML.</p>
+        This Text Will Be Capitalized.
+        <p>
+            Enter Your Name: <input type="text" id="fInput" onchange="myFunction()">
+        </p>
+    </body>
+</html>
