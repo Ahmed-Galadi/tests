@@ -8,15 +8,156 @@
             body {
                 color: red;
             }
+            .employee {
+                color: black;
+            }
         </style>
         <script>
             function myFunction() {
                var x = document.getElementById("fInput");
                 x.value = x.value.toUpperCase();
             }
+            function prom() {
+            return new Promise(
+                    (resolve, reject) => {
+                        setTimeout(
+                            () => {
+                                resolve( document.getElementById("ok").innerHTML = "OK!!" );
+                            }, 5000)
+                    });
+            } 
+            async function mySecondFunction() {
+                var myProm = await prom();
+                return myProm;
+            }
+            
         </script>
     </head>
     <body>
+        <h2>Employment Application</h2>
+        <form action="employment" action="test.php">
+            <table class="employee" width="500">
+                <tr>
+                    <td>Full Name:</td>
+                    <td>
+                        <input type="text" maxlength="20" name="firstname"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td>
+                        <input type="text" maxlength="20" name="lastname"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Position:</td>
+                    <td>
+                        <select name="position" id="position">
+                            <option>Position</option>
+                            <option value="AC">Accountant</option>
+                            <option value="RE">Receptionist</option>
+                            <option value="AD">Administrator</option>
+                            <option value="SU">Supervisor</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Experience:</td>
+                    <td>
+                        <select name="experience" id="experience">
+                            <option>Experience</option>
+                            <option value="EL">Entry Level</option>
+                            <option value="SE">Some Experience</option>
+                            <option value="VE">Very Experienced</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Job Time:</td>
+                    <td><input type="checkbox" name="ft">Full-Time</td>
+                    <td><input type="checkbox" name="pt">Part-Time</td>
+                    <td> <input type="checkbox" name="co">contrat</td>
+                </tr>
+            </table>
+        </form>
+
+        <button onclick="mySecondFunction()">ok</button>
+        <div id="ok"></div> 
+
+        
+        <table width="100%" border="1">
+            <tr>
+                <td>
+                    <table width="100%" border="1" bordercolor="blue">
+                        <tr>
+                            <td>sports</td>
+                            <td>points</td>
+                        </tr>
+                        <tr>
+                            <td>Ahmed Galadi</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Amli Palo</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Rilad Madvili</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>Billy Binki</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                    
+                            <td>1</td>
+                            <td>2</td>
+                    
+                            </td>
+                        </tr>
+                    
+                    </table>
+                </td>
+                <td>
+                    <table width="100%" border="1" bordercolor="blue">
+                        <tr>
+                            <td>sports</td>
+                            <td>points</td>
+                        </tr>
+                        <tr>
+                            <td>Ahmed Galadi</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>Amli Palo</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>Rilad Madvili</td>
+                            <td>56</td>
+                        </tr>
+                        <tr>
+                            <td>Billy Binki</td>
+                            <td>45</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                    
+                            <td>1</td>
+                            <td>2</td>
+                    
+                            </td>
+                        </tr>
+                    
+                    </table>
+                </td>
+            </tr>
+        </table>
+
         <p>This Is A Test Of HTML.<br>
         This Text Will Be Capitalized.<br>
         Enter Your Name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="fInput" onchange="myFunction()">
@@ -54,8 +195,10 @@
             totam ratione voluptas quod exercitationem fuga.<br> Possimus quis earum veniam
             quasi aliquam eligendi, placeat qui corporis!
         </p>
+
         <p><h2><a id="Article2">article 2</a></h2></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
         molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
         numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
         optio, eaque rerum! Provident similique accusantium nemo autem. <br>
@@ -75,7 +218,8 @@
         suscipit quas? Nulla, placeat. Voluptatem quaerat non architecto ab laudantium
         modi minima sunt esse temporibus sint culpa, recusandae aliquam numquam
         totam ratione voluptas quod exercitationem fuga.<br> Possimus quis earum veniam
-        quasi aliquam eligendi, placeat qui corporis!</p>
+        quasi aliquam eligendi, placeat qui corporis!
+    </p>
         <p><h2><a id="Article3">article 3</a></h2></p>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
